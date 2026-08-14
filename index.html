@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoodSolution — Agentes de IA que atendem por você, 24h</title>
+  <meta name="description" content="Atendimento inteligente no WhatsApp com agentes de IA: respondem clientes, agendam e vendem — 24 horas por dia, 7 dias por semana.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0d1117; --bg2:#131a24; --ink:#e8e6df; --dim:#9aa4b2;
+      --accent:#e8a33d; --line:#232d3b;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--ink);font-family:'Sora',system-ui,sans-serif;font-weight:300;line-height:1.7}
+    h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+    /* Nav */
+    nav{position:sticky;top:0;background:rgba(13,17,23,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:10}
+    .nav-in{display:flex;justify-content:space-between;align-items:center;height:64px}
+    .logo{font-family:'Fraunces',serif;font-size:1.25rem}
+    .logo em{color:var(--accent);font-style:italic}
+    .nav-links{display:flex;gap:28px;font-size:.9rem;color:var(--dim)}
+    .nav-links a:hover{color:var(--ink)}
+
+    /* Hero */
+    header{padding:110px 0 90px;position:relative;overflow:hidden}
+    header::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 80% 10%,rgba(232,163,61,.12),transparent 70%)}
+    .kicker{color:var(--accent);letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;margin-bottom:20px}
+    h1{font-size:clamp(2.4rem,6vw,4rem);max-width:15ch}
+    h1 em{color:var(--accent);font-style:italic}
+    .sub{color:var(--dim);font-size:1.15rem;max-width:52ch;margin:26px 0 38px}
+    .cta{display:inline-block;background:var(--accent);color:#151005;font-weight:600;font-family:'Sora',sans-serif;padding:15px 34px;border-radius:6px;font-size:1rem;transition:transform .15s ease, box-shadow .15s ease}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(232,163,61,.25)}
+    .cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:14px}
+
+    /* Sections */
+    section{padding:88px 0;border-top:1px solid var(--line)}
+    .sec-title{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:14px}
+    .sec-lead{color:var(--dim);max-width:60ch;margin-bottom:48px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+    .card{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:30px}
+    .card h3{font-size:1.15rem;margin:14px 0 10px}
+    .card p{color:var(--dim);font-size:.95rem}
+    .n{font-family:'Fraunces',serif;font-style:italic;color:var(--accent);font-size:1.6rem}
+
+    /* Steps */
+    .steps{counter-reset:s}
+    .step{display:flex;gap:24px;padding:26px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+    .step:last-child{border-bottom:none}
+    .step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:'Fraunces',serif;font-style:italic;color:var(--accent);font-size:1.5rem;min-width:52px}
+    .step h3{font-size:1.1rem;margin-bottom:6px}
+    .step p{color:var(--dim);font-size:.95rem;max-width:62ch}
+
+    /* Contact */
+    #contato{text-align:center}
+    #contato .sec-lead{margin-left:auto;margin-right:auto}
+    footer{border-top:1px solid var(--line);padding:34px 0;color:var(--dim);font-size:.85rem;text-align:center}
+    @media (max-width:640px){ .nav-links{display:none} .cta.ghost{margin-left:0;margin-top:12px} }
+  </style>
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <div class="logo">Good<em>Solution</em></div>
+  <div class="nav-links">
+    <a href="#como">Como funciona</a>
+    <a href="#casos">Pra quem é</a>
+    <a href="#contato">Contato</a>
+  </div>
+</div></nav>
+
+<header><div class="wrap">
+  <p class="kicker">Agentes de inteligência artificial</p>
+  <h1>Seu atendimento no WhatsApp, <em>trabalhando 24h</em> — até quando você dorme.</h1>
+  <p class="sub">Criamos agentes de IA sob medida que respondem seus clientes na hora, tiram dúvidas, agendam horários e encaminham vendas — com a linguagem do seu negócio, sem parecer robô.</p>
+  <a class="cta" href="#contato">Quero um agente no meu negócio</a>
+  <a class="cta ghost" href="#como">Ver como funciona</a>
+</div></header>
+
+<section id="beneficios"><div class="wrap">
+  <h2 class="sec-title">Cliente respondido na hora <em style="color:var(--accent)">compra</em>. Cliente esperando, desiste.</h2>
+  <p class="sec-lead">A maioria das vendas perdidas no WhatsApp morre na demora da resposta. Um agente de IA elimina esse problema de vez.</p>
+  <div class="grid">
+    <div class="card"><span class="n">∞</span><h3>Nunca deixa no vácuo</h3><p>Responde em segundos, de madrugada, no feriado, no fim de semana. Todo cliente é atendido no momento em que chama.</p></div>
+    <div class="card"><span class="n">✎</span><h3>Fala como o seu negócio</h3><p>Treinado com as informações da sua empresa: produtos, preços, horários, políticas. Conversa natural, no seu tom.</p></div>
+    <div class="card"><span class="n">→</span><h3>Faz, não só responde</h3><p>Agenda horário, consulta disponibilidade, registra pedido e passa pro humano quando a conversa precisa de você.</p></div>
+  </div>
+</div></section>
+
+<section id="como"><div class="wrap">
+  <h2 class="sec-title">Como funciona</h2>
+  <p class="sec-lead">Do primeiro contato ao agente no ar, sem complicação técnica pra você.</p>
+  <div class="steps">
+    <div class="step"><div><h3>Conversa de diagnóstico</h3><p>Entendemos seu atendimento hoje: o que os clientes perguntam, onde as vendas travam, o que dá pra automatizar sem perder o toque humano.</p></div></div>
+    <div class="step"><div><h3>Criamos e treinamos o agente</h3><p>Montamos o agente com o conhecimento do seu negócio e testamos junto com você até a conversa ficar do seu jeito.</p></div></div>
+    <div class="step"><div><h3>No ar no seu WhatsApp</h3><p>O agente entra em operação no seu número. Você acompanha as conversas e ele melhora continuamente com o uso.</p></div></div>
+  </div>
+</div></section>
+
+<section id="casos"><div class="wrap">
+  <h2 class="sec-title">Pra quem é</h2>
+  <p class="sec-lead">Se seu cliente chega pelo WhatsApp, um agente trabalha pra você.</p>
+  <div class="grid">
+    <div class="card"><h3>Clínicas e consultórios</h3><p>Agendamento, confirmação de consulta e dúvidas frequentes resolvidas sem ocupar a recepção.</p></div>
+    <div class="card"><h3>Comércio e delivery</h3><p>Cardápio, preços, status do pedido e promoções respondidos na hora, em qualquer horário.</p></div>
+    <div class="card"><h3>Prestadores de serviço</h3><p>Orçamentos iniciais, qualificação do cliente e agenda organizada enquanto você executa o trabalho.</p></div>
+  </div>
+</div></section>
+
+<section id="contato"><div class="wrap">
+  <h2 class="sec-title">Vamos colocar um agente no seu atendimento?</h2>
+  <p class="sec-lead">Chama a gente e receba uma demonstração com a cara do seu negócio — sem compromisso.</p>
+  <a class="cta" href="mailto:goodsolutionzx@gmail.com?subject=Quero%20um%20agente%20de%20IA">Falar com a GoodSolution</a>
+</div></section>
+
+<footer><div class="wrap">GoodSolution — Agentes de IA para atendimento · goodsolutionzx@gmail.com</div></footer>
+
+</body>
+</html>
